@@ -1,0 +1,26 @@
+{
+  "name": "express-rate-limiter",
+  "version": "1.0.0",
+  "description": "Express rate limiter based on request",
+  "main": "lib/index.js",
+  "scripts": {},
+  "keywords": [
+    "express-rate-limit",
+    "rate",
+    "limit",
+    "ratelimit",
+    "rate-limit",
+    "security",
+    "brute",
+    "force",
+    "bruteforce",
+    "brute-force",
+    "attack"
+  ],
+  "author": "Nabham Bansal",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "redis": "^2.8.0"
+  }
+}
