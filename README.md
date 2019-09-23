@@ -1,12 +1,12 @@
-# express-rate-limit
+# limiter
 
 An express rate limiting library. Limits requests based on request object property.
 
-**express-rate-limit** supports redis store till date. In-memory store is in pipeline.
+**limiter** supports redis store till date. In-memory store is in pipeline.
 
 ### Installing
 ```
-npm install @express/rate-limit
+npm install @nabham/limiter
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @express/rate-limit
 var express = require('express');
 var app = express();
 
-var expressLimiter = require('@express/rate-limit');
+var expressLimiter = require('@nabham/limiter');
 expressLimiter.initialize({ type: 'redis' });
 
 var bucket = expressLimiter.bucket({ limit: 10, window: 60 });
@@ -27,7 +27,7 @@ app.get('/', bucket, (req, res) => {
 
 ## Configuration
 
-**express-rate-limit** support these parameters for initializing configuration.
+**limiter** support these parameters for initializing configuration.
 
 ```
 {
@@ -52,7 +52,7 @@ app.get('/', bucket, (req, res) => {
 
 ### Strategy
 
-**express-rate-limit** works on the principle of sliding window algorithm. window in bucket configuration will start counting requests after first request and will reset once window time is over.
+**limiter** works on the principle of sliding window algorithm. window in bucket configuration will start counting requests after first request and will reset once window time is over.
 
 ## License
 

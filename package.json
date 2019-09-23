@@ -1,11 +1,14 @@
 {
-  "name": "@express/rate-limit",
-  "version": "1.0.0",
+  "name": "@nabham/limiter",
+  "version": "1.0.1",
   "description": "Express rate limiter based on request",
   "main": "lib/index.js",
   "scripts": {},
   "keywords": [
     "express-rate-limit",
+    "limiter",
+    "@nabham",
+    "@nabham/limiter",
     "rate",
     "limit",
     "ratelimit",
@@ -29,10 +32,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nabham/express-rate-limit.git"
+    "url": "git+https://github.com/nabham/limiter.git"
   },
   "bugs": {
-    "url": "https://github.com/nabham/express-rate-limit/issues"
+    "url": "https://github.com/nabham/limiter/issues"
   },
-  "homepage": "https://github.com/nabham/express-rate-limit#readme"
+  "homepage": "https://github.com/nabham/limiter#readme"
 }
