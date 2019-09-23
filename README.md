@@ -10,7 +10,6 @@ npm install express-limit-rate
 ```
 
 ## Usage
-___
 
 ```
 var express = require('express');
@@ -27,7 +26,6 @@ app.get('/', bucket, (req, res) => {
 ```
 
 ## Configuration
-___
 
 **express-limit-rate** support these parameters for initializing configuration.
 
@@ -44,6 +42,7 @@ ___
 **NOTE**  *These configuration is optional, if not passed will fallback to default parameters shown above.*
 
 *bucket* creation configuration
+
 | Property | Default | Description |
 | --- | --- | --- |
 | id | connection.remoteAddress | Property to be taken from request object. For ex. token, username, connection.remoteAddress ( ip ) . connection.remoteAddress is the path of ip address in express request object. user.id if using passportjs.
