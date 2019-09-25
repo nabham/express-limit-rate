@@ -1,6 +1,6 @@
 {
   "name": "@nabham/limiter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Express rate limiter based on request",
   "main": "lib/index.js",
   "scripts": {},

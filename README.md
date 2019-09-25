@@ -2,7 +2,7 @@
 
 An express rate limiting library. Limits requests based on request object property.
 
-**limiter** supports redis store till date. In-memory store is in pipeline.
+**limiter** supports redis and in-memory store till date.
 
 ### Installing
 ```
@@ -31,17 +31,25 @@ app.get('/', bucket, (req, res) => {
 
 ```
 {
-  type: 'redis'             // Type of store (only redis supported)
+  type: 'redis'             // Type of store (redis and memory is supported)
   store: {
     host: "127.0.0.1",      // Redis server hostname
     port: 6379,             // Redis server port
     db: 3                   // Redis database number
   }
 }
-```
-**NOTE**  *These configuration is optional, if not passed will fallback to default parameters shown above.*
 
-*bucket* creation configuration
+or
+
+{
+  type: 'memory'
+}
+```
+**NOTE** If store type is memory no store configuration is needed. This configuration is optional, if not passed will fallback to default parameters shown above. Default store is redis.
+
+`In-memory store does not work well in case of multi worker, as each worker will have its own heap space.`
+
+### bucket creation configuration
 
 | Property | Default | Description |
 | --- | --- | --- |
