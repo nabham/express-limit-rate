@@ -2,7 +2,7 @@
 
 An express rate limiting library. Limits requests based on request object property.
 
-**limiter** supports redis and in-memory store till date.
+**limiter** supports in-memory and redis store with atomicity among multi node processes.
 
 ### Installing
 ```
@@ -36,6 +36,7 @@ app.get('/', bucket, (req, res) => {
     host: "127.0.0.1",      // Redis server hostname
     port: 6379,             // Redis server port
     db: 3                   // Redis database number
+    atomic: true            // If atomicity needed among multi node process
   }
 }
 
@@ -47,7 +48,8 @@ or
 ```
 **NOTE** If store type is memory no store configuration is needed. This configuration is optional, if not passed will fallback to default parameters shown above. Default store is redis.
 
-`In-memory store does not work well in case of multi worker, as each worker will have its own heap space.`
+`In case of multi node processes set atomic property in store configuration. In-memory store does not work well in case of multi worker, as each worker will have its own heap space.`
+
 
 ### bucket creation configuration
 
