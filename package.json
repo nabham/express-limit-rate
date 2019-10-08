@@ -1,6 +1,6 @@
 {
   "name": "@nabham/limiter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Express rate limiter based on request",
   "main": "lib/index.js",
   "scripts": {},
@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^4.1.1",
+    "mongodb": "^3.3.2",
     "redis": "^2.8.0"
   },
   "directories": {
