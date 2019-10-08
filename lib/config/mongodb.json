@@ -1,0 +1,11 @@
+{
+  "url": "mongodb://localhost:27017",
+  "db": "ratelimit",
+  "collection": "limiter",
+  "opts": {
+    "useNewUrlParser": true,
+    "reconnectTries": 30,
+    "reconnectInterval": 10,
+    "useUnifiedTopology": true
+  }
+}
